@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>杏子甜的个人实践</title>
+<style type="text/css">
+body table tr td h1 {
+	font-size: 36pt;
+}
+body table tr td {
+	font-size: 36px;
+}
+body {
+	background-image: url(photos/bg.GIF);
+}
+body p {
+	font-size: 18px;
+}
+</style></head>
+
+<body background="photos/bg.GIF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="middle" style="border: medium dashed #0C6;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><h1>Wing FTP的安装实践</h1></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"><a href="http://www.xingzitian.top">主页</a></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><p ><strong>记使用</strong><strong>&rdquo;</strong><strong>King Ftp</strong><strong>&rdquo;</strong><strong>软件搭建文件服务</strong><strong> </strong><br />
+          一、服务端安装 <br />
+          1.首先选择自己适合的版本，我是选择免费版本，但只能用ftp和http。可以不使用&ldquo;不安全&rdquo;的ftp,但是可以使用&ldquo;较为安全的&rdquo;http连接。 <br />
+          2.安装软件并设置好管理端监听端口，我设置的为12301，并且设置管理员账户与密码。 <br />
+          二、软件的初使用简单设置 <br />
+          1有两种管理方式可选： <br />
+          (1)使用服务器软件的本地界面。（需要显示器，但是打开就能用。） <br />
+          (2)使用其他客户机进行网页访问。（不需要显示器，可以使用浏览器远程管理，方便没有显示器） <br />
+          2我使用远程浏览器管理方式：在浏览器直接输入服务器的ip（ipv6/ipv4）+设置的端口号（12301）。就可以访问，登陆成功后会自动跳出一个向导。</p>
+          <p ><img src="文档/wing FTP/原图/1.PNG" width="1366" height="736" /></p>
+          <p >2这里设置域id,选择自己需要的服务，我就选择http并且设置端口号。并且选择ip地址绑定。</p>
+          <p ><img src="文档/wing FTP/完成1.jpg" width="1366" height="736" /></p>
+          <p >3创建用户，系统会自动生成一段密码，也可以使用自己的密码。并且指定主目录。到这里，就完成了基本创建操作。 </p>
+          <p ><img src="文档/wing FTP/完成2.jpg" width="1366" height="768" /></p>
+          <ol>
+            <li>一些小功能 </li>
+          </ol>
+          <p >     1在这个页面可以看到已经登录的用户，可以强制下线。聊天功能只能用于ftp，我这里就用不上了。 </p>
+          <p><img src="文档/wing FTP/原图/7.png" width="1366" height="768" /></p>
+          <p >2还有一些关于安全连接的设置</p>
+          <p ><img src="文档/wing FTP/原图/8.png" width="1366" height="768" /></p>
+          <p >3-1杂项，自定义Logo(图是我随便选的，不要在意)</p>
+          <p ><img src="文档/wing FTP/原图/9.png" width="1366" height="768" /></p>
+          <p >3-1效果图 </p>
+          <p ><img src="文档/wing FTP/原图/10.png" width="1366" height="768" /></p>
+          <p >四、开始访问 <br />
+            依旧在浏览器里输入服务器ip+http端口号。登陆完成后。就可以开始操作了。上传、下载、解压缩、创建分享链接。 <br />
+            五、使用ipv6实现外网访问 <br />
+               1.家中设置参考 <br />
+            我设置的是路由器拨号，这就意味着一些细微参数我可以自己修改。我主要是关闭了ipv6的DHCP这样就可以让电信的拨号服务器给我分配ipv6地址。这样做有些风险，一定做好防火墙设定。这样其他设备就可以在公网上发现你。 <br />
+              2.在外网访问 <br />
+            （1）如果你不嫌输入ipv6地址麻烦，但是一定记住，输入ipv6地址需要以这种[ipv6]:12301形式在浏览器，要不然浏览器会把ipv6地址和端口号混淆。（觉得麻烦可以不看下一步） <br />
+            （2）根据自己喜好购买一个域名并进行实名认证。设置解析为AAAA记录，其他可以根据自己需求填写。 <br />
+            3.这时就可以在外网通过域名+端口号访问你的文件服务器了！ </p></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
