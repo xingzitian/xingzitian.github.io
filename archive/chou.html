@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <title>1</title>
+    <style>
+        button{
+            height: 40px;
+            width: 80px;
+            margin: 5px;
+            background:#FFFAF0;
+            border-width:1px;
+            font-size: 18px;
+        }
+        span{
+            height: 200px;
+            width: 200px;
+            background: bisque;
+            margin: 5px;
+            font-size: 20px;
+        }
+
+        .D1{
+            height: 400px;
+            width: 1500px;
+            background: #fff;
+        }
+        .B{
+            height: 40px;
+            width: 80px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .Dm{
+            height: 65px;
+            width: 300px;
+            font-size: 50px;
+            background: #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body onload="A()">
+<div align="center">
+    <div id="D1" class="D1" align="center" >
+        <input type="button" value="开始" class="B" onclick="begin()"><br>
+        <input type="button" value="结束" class="B" onclick="end()" ><br>
+    </div>
+    <div class="Dm">
+        <p  id="P2"></p>
+    </div>
+</div>
+
+<script>
+    let name;
+    let f;
+    let k=0;
+    let F=true;
+    let names=[
+        "安婉婷", "夏青松", "邓磊", "杜金磊", "傅敏尧", "高皓奇", "韩昱", "黄一飞", "焦志辉", "康恩菠", "李德睿", "李佳宇",
+        "李仕杰", "李文涛", "李旭", "刘时言", "刘文军", "马涵博", "莫少杰", "邱倩倩", "司婉茹", "孙世馨", "王福利", "王嘉怡",
+        "王丽丽", "王莅皓", "崔之涵", "王时汗", "王美懿", "何欣怡", "魏言", "吴福康", "吴佳辉", "夏晓雨", "许家豪", "杨乾仁",
+        "刘佳雨","闫洁", "杨宇航", "李锦轩", "岳拼搏", "张雨琳","邱欣月", "余东亭", "张雨茜", "杨司宇", "李金鹏", "陈海润",
+        "黄一鸣",    "唐若鑫", "方圆钦", "马亚伟", "马晓怡", "罗婷婷","王元庆","郑子隆","赵沛",
+        ];
+    //生成当前名单
+    function A(){
+        for(let i=0;i<names.length;i++){
+            if(names[i].length>1){
+                let x=document.createElement("button");
+                x.id=k+'';
+                let t=document.createTextNode(names[i]);
+                x.appendChild(t);
+                document.getElementById("D1").appendChild(x);
+                if((i+1)%12==0&i!=0){
+                    let x=document.createElement("br");
+                    document.getElementById("D1").appendChild(x);
+                }
+                k++;
+            }else{
+                let x=document.createElement("button");
+                let t=document.createTextNode(names[i]);
+                x.appendChild(t);
+                document.getElementById("D1").appendChild(x);
+                if((i+1)%12==0&i!=0){
+                    let x=document.createElement("br");
+                    document.getElementById("D1").appendChild(x);
+                }
+            }
+        }
+    }
+    function change(){
+        let ID=Math.floor(Math.random()*k);
+        name=document.getElementById(ID+'').innerHTML;
+        for(let i=0;i<k;i++){
+            if(ID!=i){
+                document.getElementById(i+'').style.cssText="background:#FFFAF0";
+            }
+            document.getElementById(ID+'').style.cssText="background:#f00";
+
+        }
+    }
+    function begin(){
+        document.getElementById("P2").style.cssText="background: #ffd30b"
+        document.getElementById("P2").innerHTML="";
+        if(F){
+            f=setInterval(change,50);
+            F=false;
+        }
+    }
+    function end(){
+        F=true;
+        document.getElementById("P2").style.cssText="background: #ffd30b"
+        document.getElementById("P2").innerHTML=name;
+        clearInterval(f);
+    }
+    
+</script>
+
+</body>
+</html>
